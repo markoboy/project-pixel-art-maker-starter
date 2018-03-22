@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function makeGrid(evt) {
         // Prevent submit default action.
         evt.preventDefault();
+        // Clear previous grid table
+        canvas.innerHTML = '';
         // Select size input
         const height = sizePicker.querySelector('#inputHeight').value;
         const width = sizePicker.querySelector('#inputWeight').value;
