@@ -1,10 +1,13 @@
-// Select color input
-// Select size input
+document.addEventListener('DOMContentLoaded', function() {
+    // Select color input
+    // Select size input
 
-// When size is submitted by the user, call makeGrid()
+    // When size is submitted by the user, call makeGrid()
 
-function makeGrid() {
+    function makeGrid() {
 
-// Your code goes here!
+    // Your code goes here!
 
-}
+    }
+
+});
