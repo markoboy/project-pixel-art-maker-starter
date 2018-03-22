@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select color input
 
     // When size is submitted by the user, call makeGrid()
-    sizePicker.addEventListener('submit', function(e) {
-        makeGrid(e);
-    });
+    sizePicker.addEventListener('submit', makeGrid);
 
     function makeGrid(evt) {
         // Prevent submit default action.
