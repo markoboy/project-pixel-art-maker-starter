@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select Design canvas table
     const canvas = document.querySelector('#pixelCanvas');
     // Select color input
+    const color = document.querySelector('#colorPicker');
 
     // When size is submitted by the user, call makeGrid()
     sizePicker.addEventListener('submit', makeGrid);
@@ -24,5 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
+    // Grid event listener, color cells when click is pressed.
+    canvas.addEventListener('click', function(evt) {
+        // Check if the pixel is clicked
+        if (evt.target.nodeName === 'TD') {
+            // Color the pixel with the picked color
+            evt.target.style.background = color.value;
+        }
+    });
 
 });
