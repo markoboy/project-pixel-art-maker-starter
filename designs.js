@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select color input
     const color = document.querySelector('#colorPicker');
 
-    // When size is submitted by the user, call makeGrid()
-    sizePicker.addEventListener('submit', makeGrid);
-
+    /** @description - A function that creates a grid when it is called,
+      * based on the inputs that the user has picked.
+      * @param {event} - The event that ocurs
+    */
     function makeGrid(evt) {
         // Prevent submit default action.
         evt.preventDefault();
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
+    // When size is submitted by the user, call makeGrid()
+    sizePicker.addEventListener('submit', makeGrid);
 
     // Grid event listener, color cells when click is pressed.
     canvas.addEventListener('click', function(evt) {
