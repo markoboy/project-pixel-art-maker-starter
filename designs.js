@@ -30,8 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.addEventListener('click', function(evt) {
         // Check if the pixel is clicked
         if (evt.target.nodeName === 'TD') {
-            // Color the pixel with the picked color
-            evt.target.style.background = color.value;
+            // Store target and color in variable
+            let pixel = evt.target;
+            let pickedColor = color.value;
+            // Erase pixel if the same color is picked
+            if (pixel.bgColor === pickedColor) {
+                pixel.bgColor = '';
+            } else {
+                pixel.bgColor = pickedColor;
+            }
         }
     });
 
