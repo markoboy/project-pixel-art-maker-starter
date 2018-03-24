@@ -37,4 +37,20 @@ td {
 
 input[type=number] {
     width: 6em;
+    border-radius: 8px;
+}
+
+input[type=submit] {
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px 1px grey;
+    cursor: pointer;
+    background: linear-gradient(grey 1%, white 75%, grey 100%);
+    color: grey;
+}
+
+input[type=submit]:hover {
+    background: linear-gradient(white 5%, grey 85%, white 100%);
+    color: black;
+    transform: scale(1.05);
+    transition: scale 0.3s, color 0.3s, background 0.3s;
 }
